@@ -39,9 +39,23 @@ var STKit = (function () {
         }
     };
 
+    var memoize = function (f) {
+        var cache = {};
+        return function () {
+            var key = arguments.length + Array.prototype.join.call(arguments, ',');
+            if (key in cache) {
+                return cache[key];
+            } else {
+                cache[key] = f.apply(this, arguments);
+                return cache[key];
+            }
+        };
+    };
+
     return {
         isObjectLikeArray: isObjectLikeArray,
-        debehaviorizer: debehaviorizer
+        debehaviorizer: debehaviorizer,
+        memoize: memoize,
     };
 })();
 module.exports = STKit;
