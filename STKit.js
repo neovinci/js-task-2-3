@@ -49,7 +49,7 @@ var STKit = (function () {
     var semiColonSON = function (str) {
         var obj = {};
         var temp = str.substring(0);
-        console.log(temp);
+
         //Regular expressions
         var patternArray = /([a-zA-Z]+\d*:)([a-zA-Z]+\d*,[a-zA-Z]+\d*;)+/g;
         var patternMethodOne = /[a-zA-Z]+\d*,\|return (\S+\s*\S*)+\|/g;
