@@ -39,7 +39,7 @@ console.log(veryComplicatedObject);
 console.log(stateObj);
 
 //SemiColonSON Evolved
-console.log('SemiColonSON Evolved =>')
+console.log('SemiColonSON Evolved =>');
 console.log(STKit.semiColonSON(';key,value;methodName2,|function (a) { return a + 1; }|;methodName,' +
     '|return true|;arrayHere:k1,v1;k2,v2;k3,v3;'));
 
