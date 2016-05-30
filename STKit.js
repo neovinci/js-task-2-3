@@ -88,7 +88,8 @@ var STKit = (function () {
                 for (var j = 0; j < methodsTypeOne.length; j++) {
                     var methodTypeOneSplit = methodsTypeOne[j].split(',|');
                     var methodName = methodTypeOneSplit[0];
-                    var methodTypeOneExpressions =  methodTypeOneSplit[1].substring(0, methodTypeOneSplit[1].indexOf('|'));
+                    var methodTypeOneExpressions =  methodTypeOneSplit[1].substring(0,
+                        methodTypeOneSplit[1].indexOf('|'));
                     obj[methodName] = new Function(methodTypeOneExpressions);
                 }
             }
